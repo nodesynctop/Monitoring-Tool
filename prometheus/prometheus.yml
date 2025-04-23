@@ -12,8 +12,8 @@ scrape_configs:
     static_configs:
       - targets: ['node_exporter:9100']  # Scrape Node Exporter metrics
 
-  # Scrape Tendermint metrics (replace IP if necessary)
+  # Scrape Tendermint metrics (replace with your actual IP and port)
   - job_name: 'tendermint'
     metrics_path: /metrics  # Default metrics path
     static_configs:
-      - targets: ['your_ip:port_metric']  # Replace with the IP address of your Tendermint node
+      - targets: ['your_ip:26660']  # Replace with the IP address and port of your Tendermint node
