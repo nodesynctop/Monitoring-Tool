@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # Prometheus service configuration
+  prometheus:
+    image: prom/prometheus:v3.3.0-rc.1
+    container_name: prometheus
+    ports:
+      - "9101:9090"  # Expose Prometheus UI on port 9101
+    volumes:
+      - ./prometheus:/etc/prometheus  # Mount prometheus.yml to the container
+      - prometheus_data:/prometheus   # Persist Prometheus data
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'  # Use the custom prometheus.yml
+    restart: unless-stopped
+
+  # Node Exporter service configuration
+  node_exporter:
+    image: prom/node-exporter:v1.9.1
+    container_name: node_exporter
+    ports:
+      - "9102:9100"  # Expose Node Exporter metrics on port 9102
+    restart: unless-stopped
+
+  # Grafana service configuration
+  grafana:
+    image: grafana/grafana:11.6.0
+    container_name: grafana
+    ports:
+      - "3000:3000"  # Expose Grafana UI on port 3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin  # Set Grafana admin user
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Set Grafana admin password
+    volumes:
+      - grafana_data:/var/lib/grafana  # Persist Grafana data
+    restart: unless-stopped
+
+# Volumes for Prometheus and Grafana data
+volumes:
+  prometheus_data:
+  grafana_data:
