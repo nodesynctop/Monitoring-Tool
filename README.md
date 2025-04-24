@@ -29,6 +29,4 @@ default password: `admin`
 
 You can change the password after your first login.
 
-## Prometheus
-
-Use http://prometheus:9090 as the Prometheus server URL for your setup. This is the default URL to access the Prometheus web interface, which is running within Docker.
+Use `http://prometheus:9090` as the Prometheus server URL for your setup. This is the default URL to access the Prometheus web interface, which is running within Docker.
