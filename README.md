@@ -49,3 +49,11 @@ Save and Restart Prometheus
 ```
 docker compose restart prometheus
 ```
+#### 6.  Stop the Containers 
+```
+docker stop grafana prometheus node_exporter
+```
+#### 7. Remove the Containers
+```
+docker rm grafana prometheus node_exporter
+```
