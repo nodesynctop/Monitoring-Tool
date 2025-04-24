@@ -30,3 +30,22 @@ default password: `admin`
 You can change the password after your first login.
 
 Use `http://prometheus:9090` as the Prometheus server URL for your setup. This is the default URL to access the Prometheus web interface, which is running within Docker.
+#### How to Add Multiple Tendermint Nodes
+Open the Prometheus Configuration File
+```
+cd $HOME/Monitoring-Tool && sudo nano prometheus/prometheus.yml
+```
+Add Multiple Nodes
+```
+scrape_configs:
+  - job_name: 'tendermint'
+    static_configs:
+      - targets:
+          - 'your_ip1:port'  # Replace with the IP address and port of the first Tendermint node
+          - 'your_ip2:port'  # Replace with the IP address and port of the second Tendermint node
+          - 'your_ip3:port'  # Replace with the IP address and port of the third Tendermint node
+```
+Save and Restart Prometheus
+```
+docker compose restart prometheus
+```
