@@ -11,7 +11,7 @@ command -v docker >/dev/null || (curl -fsSL https://get.docker.com | sudo sh)
 cd $HOME && git clone https://github.com/nodesynctop/Monitoring-Tool.git
 ```
 ## Configuration files
-``
+```
 cd Monitoring-Tool
 ```
 ```
