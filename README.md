@@ -14,4 +14,4 @@ cd $HOME && git clone https://github.com/nodesynctop/Monitoring-Tool.git
 ```
 cd Monitoring-Tool && sudo nano prometheus/prometheus.yml
 ```
-`targets: ['your_ip:26660']  # Replace with the IP address and port of your Tendermint node`
+**your_ip:26660** # Replace with the IP address and port of your Tendermint node
