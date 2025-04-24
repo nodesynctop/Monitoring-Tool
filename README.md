@@ -26,3 +26,5 @@ sudo docker compose up -d
 default user: `admin`
 
 default password: `admin`
+
+You can change the password after your first login.
