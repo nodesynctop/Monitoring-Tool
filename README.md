@@ -1,10 +1,10 @@
 # Monitoring-Tool
 An easy setup to instantly get a powerful monitoring tool for all your validation nodes.
-## 1. Install Docker
+## I. Install Docker
 ```
 command -v docker >/dev/null || (curl -fsSL https://get.docker.com | sudo sh)
 ```
-## 2. Install Tool
+## II. Install Tool
 
 #### 1. Clone the repo
 ```
