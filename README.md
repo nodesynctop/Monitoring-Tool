@@ -4,7 +4,7 @@ An easy setup to instantly get a powerful monitoring tool for all your validatio
 ```
 command -v docker >/dev/null || (curl -fsSL https://get.docker.com | sudo sh)
 ```
-## Config
+## Install Tool
 
 ### Clone the repo
 ```
