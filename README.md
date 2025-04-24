@@ -20,3 +20,9 @@ cd Monitoring-Tool && sudo nano prometheus/prometheus.yml
 ```
 sudo docker compose up -d
 ```
+
+## Open in browser http://<your_server_ip>:3000
+
+default user: `admin`
+
+default password: `admin`
