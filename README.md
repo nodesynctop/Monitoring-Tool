@@ -6,22 +6,22 @@ command -v docker >/dev/null || (curl -fsSL https://get.docker.com | sudo sh)
 ```
 ## 2. Install Tool
 
- 1. Clone the repo
+#### 1. Clone the repo
 ```
 cd $HOME && git clone https://github.com/nodesynctop/Monitoring-Tool.git
 ```
-2. Configuration files
+#### 2. Configuration files
 ```
 cd Monitoring-Tool && sudo nano prometheus/prometheus.yml
 ```
 `your_ip:26660` # Replace with the IP address and port of your Tendermint node
 
-3. Start 
+#### 3. Start 
 ```
 sudo docker compose up -d
 ```
 
-4. Open in browser http://<your_server_ip>:3000
+#### 4. Open in browser http://<your_server_ip>:3000
 
 default user: `admin`
 
